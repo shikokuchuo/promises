@@ -46,9 +46,9 @@ jobs:
         with:
           needs: check
           extra-packages: |
-            any::remotes
+            any::pkgload
       - name: Run testthat on test-cpp.R
         run: |
-          devtools::load_all()
+          pkgload::load_all()
           testthat::test_file(file.path("tests", "testthat", "test-cpp.R"))
         shell: Rscript {0}
