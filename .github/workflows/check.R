@@ -1,3 +1,3 @@
 pkgload::load_all()
-testtthat::test_file("tests/testthat/test-cpp.R")
-stop("error")
+library(testthat)
+test_file("tests/testthat/test-cpp.R", reporter = check_reporter())
